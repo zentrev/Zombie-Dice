@@ -13,68 +13,69 @@ public class Turns {
     private Dice[] die = new Dice[3];
 
     //Runs turns
-    private void takeTurn{
+    private void takeTurn(){
 
         //checks if we have a periveus runner
-        for(int i = 0; i > 3; i++){
-            if(die[i].status.notequals("runner")){
-                die[i].randomize();
+        for(int i = 0; i < 3; i++){
+            if(!die[i].getStatus().equals("runner")){
+                //randomize the dice color
+                //die[i].randomize();
             }
         }
 
         //rolls dice based on color
-        for(int i = 0; i > 3; i++){
-            if(die[i].Color.equals("green"){
+        for(int i = 0; i < 3; i++){
+            if(die[i].getColor().equals("green")){
                 switch((int)(Math.random() * 6)){
                 case 0:
                 case 1:
                 case 2:
                     brains++;
-                    die[i].status = "brain";
+                    die[i].setStatus("brain");
                     break;
                 case 3:
                 case 4:
-                    die[i].status = "runner";
+                    die[i].setStatus("runner");
                     break;
                 case 5:
                     shots++;
-                    die[i].status = "shot";
+                    die[i].setStatus("shot");
                     break;
                 }
             }
-            if(die.Color.equals("yellow"){
+            if(die[i].getColor().equals("yellow")){
                 switch((int)(Math.random() * 6)){
                     case 0:
                     case 1:
                         brains++;
-                        die[i].status = "brain";
+                        die[i].setStatus("brain");
                         break;
                     case 2:
                     case 3:
-                        die[i].status = "runner";
+                        die[i].setStatus("runner");
                         break;
                     case 4:
                     case 5:
                         shots++;
-                        die[i].status = "shot";
+                        die[i].setStatus("shot");
                         break;
                 }
             }
-            if(die.Color.equals("red"){
+            if(die[i].getColor().equals("red")){
                 switch((int)(Math.random() * 6)){
                     case 0:
                         brains++;
-                        die[i].status = "brain";
+                        die[i].setStatus("brain");
                         break;
                     case 1:
                     case 2:
-                        die[i].status = "runner";
+                        die[i].setStatus("runner");
                         break;
                     case 3:
                     case 4:
                     case 5:
                         shots++;
-                        die[i].status = "shot";
+                        die[i].setStatus("shot");
                         break;
                 }
             }
