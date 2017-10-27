@@ -25,6 +25,10 @@ public class Main {
                 "│   ===&#  │ \n" +
                 "│  //      │ \n" +
                 "┕━━━━━━━━━━━━┙ ");
+
+
+        System.out.println("This is a git test");
+        System.out.println("this is another test");
     }
 }
 
