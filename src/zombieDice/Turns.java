@@ -20,6 +20,7 @@ public class Turns {
             if(!die[i].getStatus().equals("runner")){
                 //randomize the dice color
                 //die[i].randomize();
+                System.out.println("Insert randomize for dice");
             }
         }
 
