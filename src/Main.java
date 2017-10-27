@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Game game = new Game();
         game.startGame();
-        System.out.println("Matt sucks");
+        System.out.println("Matt sucksss");
 
         //Just messing around with some dice visuals
         System.out.println("\u001b[32m"+
