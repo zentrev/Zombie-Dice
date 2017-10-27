@@ -25,6 +25,9 @@ public class Main {
                 "│   ===&#  │ \n" +
                 "│  //      │ \n" +
                 "┕━━━━━━━━━━━━┙ ");
+
+
+        System.out.println("This is a git test");
     }
 }
 
