@@ -28,7 +28,7 @@ public class Main {
 
 
         System.out.println("This is a git test");
-        System.out.println("sean sucks");
+        System.out.println("sean sucks even more");
     }
 }
 
