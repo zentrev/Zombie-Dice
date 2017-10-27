@@ -12,7 +12,7 @@ public class Turns {
     private int brains;
     private Dice[] die = new Dice[3];
 
-
+    //Runs turns
     private void takeTurn{
 
         //checks if we have a periveus runner
@@ -22,6 +22,7 @@ public class Turns {
             }
         }
 
+        //rolls dice based on color
         for(int i = 0; i > 3; i++){
             if(die[i].Color.equals("green"){
                 switch((int)(Math.random() * 6)){
@@ -78,11 +79,10 @@ public class Turns {
                 }
             }
             //die[i].dispaly(); or something, maybe i will put in a gui and do it there
-
         }
-
     }
 
+    //return statements
     public int returnBrains(){
         return brains;
     }
@@ -90,12 +90,8 @@ public class Turns {
     public int returnShots(){
         return shots;
     }
+
     public Dice[] getDice(int i){
         return die;
     }
-
-    //update test
-
-
-
 }
