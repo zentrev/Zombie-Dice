@@ -28,7 +28,7 @@ public class Main {
                 "│   ===&#  │ \n" +
                 "│  //      │ \n" +
                 "┕━━━━━━━━━━━━┙ ");
-        //uncomment me to see
+        //uncomment below me to see
 //        SwingUtilities.invokeLater(new Runnable(){
 //            public void run() {
 //                new MainFrame();
