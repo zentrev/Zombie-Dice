@@ -1,11 +1,13 @@
+import Frame.MainFrame;
 import zombieDice.Game;
+
+import javax.swing.*;
 
 public class Main {
     //runs the game
     public static void main(String[] args) {
         Game game = new Game();
         game.startGame();
-        System.out.println("Matt suckssss");
 
         //Just messing around with some dice visuals
         System.out.println("\u001b[32m"+
@@ -26,6 +28,12 @@ public class Main {
                 "│   ===&#  │ \n" +
                 "│  //      │ \n" +
                 "┕━━━━━━━━━━━━┙ ");
+        //uncomment me to see
+//        SwingUtilities.invokeLater(new Runnable(){
+//            public void run() {
+//                new MainFrame();
+//            }
+//        });
     }
 }
 
