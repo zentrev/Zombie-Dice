@@ -17,13 +17,15 @@ public class Rounds {
 
         System.out.println(Player.get(playerNumber).getPlayerName() + "'s Turn!");
         int shots = 0;
+        int brains = 0;
         while (shots < 3) {
             Turns.takeTurn();
             shots = Turns.returnShots();
             System.out.println(shots);
             shots++;
-
         }
+
+        Player.get(playerNumber).addbrain(brains);
         Turns.resetTurns();
 
 
