@@ -1,12 +1,15 @@
 package zombieDice;
 
 import java.util.Scanner;
+import java.util.List;
+import java.util.LinkedList;
 
 public class Game {
     public void startGame() {
         Scanner scanner = new Scanner(System.in);
 
-
+List<Players> Player = new LinkedList<Players>();
+Player = new LinkedList<Players>();
 
         //makes players
         //goes threw every players rounds
@@ -28,7 +31,7 @@ public class Game {
                 }
             }
 
-            Players.add(new Players(playerx));
+            Player.add(new Players(playerx));
             System.out.println("Is there another player?: ");
             String input = scanner.nextLine();
 
