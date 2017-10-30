@@ -56,7 +56,7 @@ Player = new LinkedList<Players>();
 
 boolean r = true;
 
-        System.out.println(Player.get().players());
+
 
 
         while (r){
