@@ -47,14 +47,27 @@ Player = new LinkedList<Players>();
 
 
 
-
+        int listLenght = 0;
 
         for (Players x : Player) {
-            if(x.braincount() < 13){
-
-            }
+            listLenght++;
         }
 
+
+boolean r = true;
+
+        System.out.println(Player.get().players());
+
+
+        while (r){
+            for (int i = 0; i < listLenght; i++){
+                Rounds.Round(i);
+if (Player.get(i).braincount() >= 13) {
+    i = listLenght+1;
+    r = false;
+}
+            }
+        }
     }
 }
 

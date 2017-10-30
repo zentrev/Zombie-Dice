@@ -1,5 +1,5 @@
-import Frame.MainFrame;
-import Frame.PlayerPanel;
+//import Frame.MainFrame;
+//import Frame.PlayerPanel;
 import zombieDice.Game;
 
 import javax.swing.*;
