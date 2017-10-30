@@ -6,18 +6,21 @@ public class Dice {
     //has ability not to change dice in case it lands on runner
     //hello
 
-    private String color;
-    private String status;
+    public String color = "green";
+    private String status = "";
 
-    public void die(){
-        this.color = "";
-        this.status = "";
+    public Dice(){
+        color = "green";
+        status = "runner";
     }
 
     public String getColor(){return color;}
     public String getStatus(){return status;}
     public void setStatus(String stat){
         this.status = stat;
+    }
+    public void setColor(String col){
+        this.color = col;
     }
 
 }
