@@ -4,7 +4,7 @@ public class Dice {
     //make dice object that can be red yellow or green
     //holds status of die, brain-runner-shot
     //has ability not to change dice in case it lands on runner
-    //hi
+    //hello
 
     private String color;
     private String status;
