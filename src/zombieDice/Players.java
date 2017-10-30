@@ -12,14 +12,21 @@ public class Players {
 
     //makes object of players
     public String players(){
-        return playerName;
+        return this.playerName;
 
     }
 
     public int braincount(){
-        return brains;
+        return this.brains;
 
     }
+
+    public void addbrain(int addbrains){
+        this.brains = this.brains+addbrains;
+
+    }
+
+
 
     //We need a method to add brains to a player
 
