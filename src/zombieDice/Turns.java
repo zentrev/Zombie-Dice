@@ -1,6 +1,9 @@
 package zombieDice;
 
 
+import Frame.GamePanel;
+
+import javax.swing.*;
 
 public class Turns {
 
@@ -94,5 +97,9 @@ public class Turns {
 
     public static int returnShots() {
         return shots;
+    }
+    public static void resetTurns(){
+        shots = 0;
+        brains = 0;
     }
 }

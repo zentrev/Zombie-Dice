@@ -12,7 +12,6 @@ public class Dice {
 
     public Dice(){
         color = null;
-        status = "runner";
+        status = "";
     }
-
 }

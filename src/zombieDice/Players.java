@@ -11,7 +11,7 @@ public class Players {
     }
 
     //makes object of players
-    public String players(){
+    public String getPlayerName(){
         return this.playerName;
 
     }
@@ -22,13 +22,7 @@ public class Players {
     }
 
     public void addbrain(int addbrains){
-        this.brains = this.brains+addbrains;
+        this.brains = this.brains + addbrains;
 
     }
-
-
-
-    //We need a method to add brains to a player
-
-
 }

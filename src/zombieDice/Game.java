@@ -15,7 +15,7 @@ public class Game {
         //Variables
         Scanner scanner = new Scanner(System.in);
         List<Players> Player = new LinkedList<Players>();
-        Player = new LinkedList<Players>();
+
         String playerx = "";
         String input;
         boolean makePlayer = true;
@@ -32,6 +32,7 @@ public class Game {
                     nameCheck = false;
                 }
             }
+
 
             Player.add(new Players(playerx));
             System.out.println("Is there another player?: (yes/no)");
@@ -52,7 +53,7 @@ public class Game {
         //plays rounds
         while (playRounds){
             for (int i = 0; i < listLength; i++){
-                Rounds.Round(i);
+                Rounds.Round(i, Player);
                 if (Player.get(i).braincount() >= 13) {
                     i = listLength+1;
                     playRounds = false;
