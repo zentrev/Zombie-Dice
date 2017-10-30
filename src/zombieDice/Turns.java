@@ -8,9 +8,9 @@ public class Turns {
     //roll dice based on color chances
     //return brains and strikes
 
-    private int shots;
-    private int brains;
-    private Dice[] die = new Dice[3];
+    private static int shots;
+    private static int brains;
+    private static Dice[] die = new Dice[3];
 
     //Runs turns
     private void takeTurn(){
