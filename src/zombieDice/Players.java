@@ -20,9 +20,8 @@ public class Players {
         return brains;
 
     }
-    //keep track of players brains and name
 
-    //encapsulation to access and edit player information
+    //We need a method to add brains to a player
 
 
 }
