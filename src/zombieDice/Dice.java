@@ -2,9 +2,12 @@ package zombieDice;
 
 public class Dice {
 
-    //We need to make a randomizer that can be called to randomize a die if they are not runners
+    //We need to be able to get the color name and status
+    //we need to be able to change the status
+    //we need to randomize the color if we want to
 
-    public String color = null;
+
+    private String color = null;
     private String status = "";
 
     public Dice(){

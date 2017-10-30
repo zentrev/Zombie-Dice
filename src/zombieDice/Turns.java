@@ -13,14 +13,11 @@ public class Turns {
     //Runs turns
     public static void takeTurn() {
 
-        die[0].setColor("green");
-        die[1].setColor("yellow");
-        die[2].setColor("red");
 
         //checks if we have a runner
         for (int i = 0; i < 3; i++) {
             if (!(die[i].getStatus()).equals("runner")) {
-                System.out.println("Insert randomize for dice");
+                die[i].randomize();
             }
         }
 
