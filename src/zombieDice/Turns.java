@@ -85,15 +85,15 @@ public class Turns {
     }
 
     //return statements
-    public int returnBrains(){
+    public static int returnBrains(){
         return brains;
     }
 
-    public int returnShots(){
+    public static int returnShots(){
         return shots;
     }
 
-    public Dice[] getDice(int i){
+    public static Dice[] getDice(int i){
         return die;
     }
 }
