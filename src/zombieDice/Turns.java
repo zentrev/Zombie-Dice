@@ -14,7 +14,7 @@ public class Turns {
     private static Dice[] die = new Dice[3];
 
     //Runs turns
-    private void takeTurn(){
+    private static void takeTurn(){
 
         //checks if we have a periveus runner
         for(int i = 0; i < 3; i++){
