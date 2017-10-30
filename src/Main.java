@@ -1,4 +1,5 @@
 import Frame.MainFrame;
+import Frame.PlayerPanel;
 import zombieDice.Game;
 
 import javax.swing.*;
@@ -6,8 +7,7 @@ import javax.swing.*;
 public class Main {
     //runs the game
     public static void main(String[] args) {
-        Game game = new Game();
-        game.startGame();
+
 
         //Just messing around with some dice visuals
         System.out.println("\u001b[32m"+
@@ -34,6 +34,8 @@ public class Main {
 //                new MainFrame();
 //            }
 //        });
+//        Game game = new Game();
+//        game.startGame();
     }
 }
 

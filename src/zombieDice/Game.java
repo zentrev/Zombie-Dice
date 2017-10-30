@@ -1,6 +1,10 @@
 package zombieDice;
 
+import Frame.PlayerPanel;
+import java.lang.String;
+
 public class Game {
+
     public void startGame(){
         //makes players
         //goes threw every players rounds
@@ -8,4 +12,5 @@ public class Game {
         //end the game showing the winner
 
     }
+
 }
