@@ -8,16 +8,23 @@ public class Rounds {
         //give option to end round and collect current brains
 
         //we need to set the dice array in turns to shots or brains, This way we don't carry the runners from the last round
-    public static void Round(int playerNumber){
+    public void Round(){
 
-        //Placeholder dice = new Placeholder();
+
+
+
+        Placeholder dice = new Placeholder();
+
         Turns turn = new Turns();
         int shots = turn.returnShots();
-        while (shots < 30) {
+        int brain = turn.returnBrains();
+        while()
+        while (shots < 3) {
 
         }
 
 
-        //Placeholder2 players = new Placeholder2();
+
+
     }
 }
