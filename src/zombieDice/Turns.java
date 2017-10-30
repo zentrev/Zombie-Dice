@@ -7,6 +7,7 @@ public class Turns {
     //get three dice and colors, runners must be selected
     //roll dice based on color chances
     //return brains and strikes
+    //hi
 
     private static int shots;
     private static int brains;
