@@ -5,7 +5,17 @@ public class Players {
     private int brains = 0;
 
     //makes object of players
+    public String players(){
+        return playerName;
+
+    }
+
+    public int braincount(){
+        return brains;
+
+    }
     //keep track of players brains and name
+
     //encapsulation to access and edit player information
 
 
