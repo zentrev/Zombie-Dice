@@ -9,6 +9,7 @@ public class Players {
         this.playerName = playerSet;
         this.brains = 0;
     }
+
     //makes object of players
     public String players(){
         return playerName;

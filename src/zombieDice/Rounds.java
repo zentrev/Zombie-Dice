@@ -10,7 +10,7 @@ public class Rounds {
         //we need to set the dice array in turns to shots or brains, This way we don't carry the runners from the last round
     public void Round(){
 
-        Placeholder dice = new Placeholder();
+        //Placeholder dice = new Placeholder();
         Turns turn = new Turns();
         int shots = turn.returnShots();
         while (shots < 30) {
@@ -18,6 +18,6 @@ public class Rounds {
         }
 
 
-        Placeholder2 players = new Placeholder2();
+        //Placeholder2 players = new Placeholder2();
     }
 }

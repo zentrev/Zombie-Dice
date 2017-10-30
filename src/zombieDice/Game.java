@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.LinkedList;
 
 public class Game {
-    public void startGame() {
+    public static void startGame() {
         Scanner scanner = new Scanner(System.in);
 
 List<Players> Player = new LinkedList<Players>();
@@ -37,6 +37,21 @@ Player = new LinkedList<Players>();
 
             if (!input.equalsIgnoreCase("yes")) {
                 p = false;
+            }else{
+                n = true;
+            }
+        }
+
+
+
+
+
+
+
+
+        for (Players x : Player) {
+            if(x.braincount() < 13){
+
             }
         }
 
