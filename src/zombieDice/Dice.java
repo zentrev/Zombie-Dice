@@ -41,7 +41,7 @@ public class Dice {
         }
     }
     public void rollDice(){
-        int Mando = (int) (math.random() * 6);
+        int Mando = (int) (Math.random() * 6);
         if (this.getColor().equals("green") ) {
 
             switch (Mando) {
