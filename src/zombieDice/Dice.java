@@ -1,7 +1,6 @@
 package zombieDice;
 
 public class Dice {
-    //make dice object that can be red yellow or green
     //holds status of die, brain-runner-shot
     //has ability not to change dice in case it lands on runner
 
@@ -28,7 +27,7 @@ public class Dice {
     }
 
     public void changeColor() {
-        int Rando = Math.random() * 100;
+        int Rando = (int) (Math.random() * 100);
         if (Rando <= 46) {
             this.color = "green";
 
@@ -37,7 +36,7 @@ public class Dice {
         else if (Rando > 46 && Rando <= 77){
             this.color = "yellow";
         }
-        else (Rando > 77){
+        else if (Rando > 77) {
             this.color = "RED";
         }
     }
