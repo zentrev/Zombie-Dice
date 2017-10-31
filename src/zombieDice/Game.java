@@ -24,6 +24,7 @@ public class Game {
         boolean nameCheck = true;
         boolean playRounds = true;
         int listLength = 0;
+        int currentPlayer = 0;
 
         //Player Creation
         while (makePlayer) {
@@ -58,12 +59,24 @@ public class Game {
             for (int i = 0; i < listLength; i++){
                 Rounds.Round(i, Player);
                 if (Player.get(i).braincount() >= 13) {
+                    currentPlayer = i;
                     i = listLength+1;
                     playRounds = false;
+
                 }
             }
             playRounds = false;
         }
+
+        for ( int i = 0; i < listLength -1; i++){
+            currentPlayer++;
+            if(currentPlayer == listLength){
+                currentPlayer = 1;
+            }
+            Rounds.Round(currentPlayer, Player);
+        }
+
+
     }
 }
 
