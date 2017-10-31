@@ -30,8 +30,6 @@ public class Dice {
         int Rando = (int) (Math.random() * 100);
         if (Rando <= 46) {
             this.color = "green";
-
-
         }
         else if (Rando > 46 && Rando <= 77){
             this.color = "yellow";
