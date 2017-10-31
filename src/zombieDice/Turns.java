@@ -30,9 +30,12 @@ public class Turns {
             if((die[i].getStatus()).equals("SHOT!")){
                 shots++;
             }
-            System.out.println("\u001b[33m" + "the color is " + die[i].getColor() + ", the state is " + die[i].getStatus());
-
         }
+        DisplayDice.setD1(die[0].getColor(), die[0].getStatus());
+        DisplayDice.setD2(die[1].getColor(), die[1].getStatus());
+        DisplayDice.setD3(die[2].getColor(), die[2].getStatus());
+        DisplayDice.show();
+
 
 
     }

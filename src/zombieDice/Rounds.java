@@ -6,42 +6,32 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Rounds {
-        //Should set shots and brains to 0 and dice != runner (see below)
-        //check if strikes are lower then 3 if not end round
-        //run turns until round is over
-        //stores brains until round is over
-        //give option to end round and collect current brains
-        //we need to set the dice array in turns to shots or brains, This way we don't carry the runners from the last round
-
 
     public static void Round(int playerNumber, List<Players> Player){
         Scanner scanner = new Scanner(System.in);
 
         Turns.resetTurns();
-        System.out.println(Player.get(playerNumber).getPlayerName() + "'s Turn!");
+        System.out.println("\u001B[1m" + Player.get(playerNumber).getPlayerName() + "'s Turn!");
         int shots = 0;
         int brains = 0;
         while (shots < 3) {
             Turns.takeTurn();
            // shots = Turns.returnShots();
-            System.out.println(shots);
             shots = Turns.returnShots();
             brains = Turns.returnBrains();
-            System.out.println("You got " + brains + " brains");
-            System.out.println("Total brains: " + Player.get(playerNumber).getBrains());
-            System.out.println("would you like to roll again or eat your brains(r or b)");
-            String roll = scanner.nextLine();
-            if (roll.equalsIgnoreCase("b")){
-                shots = 3;
-                Player.get(playerNumber).addbrain(brains);
+            if(shots < 3) {
+                System.out.println("You got " + brains + " brains and you have " + shots + " Shots");
+                System.out.println("Total brains: " + Player.get(playerNumber).getBrains());
+                System.out.println("would you like to roll again or eat your brains(r or b)");
+                String roll = scanner.nextLine();
+                if (roll.equalsIgnoreCase("b")) {
+                    shots = 3;
+                    Player.get(playerNumber).addbrain(brains);
+                    System.out.println("\u001B[1m" + "\u001B[32m" +Player.get(playerNumber).getPlayerName() + " ate the brains and how has " + Player.get(playerNumber).getBrains() + " Brains!" + "\n");
+                }
+            }else{
+                System.out.println("\u001B[1m" + "\u001B[31m" + "You took to many shots!");
             }
         }
-
-
-     //   Turns.resetTurns();
-
-
-
-        //Placeholder2 players = new Placeholder2();
     }
 }
