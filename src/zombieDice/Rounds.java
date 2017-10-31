@@ -3,6 +3,7 @@ package zombieDice;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Rounds {
         //Should set shots and brains to 0 and dice != runner (see below)
@@ -14,6 +15,7 @@ public class Rounds {
 
 
     public static void Round(int playerNumber, List<Players> Player){
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println(Player.get(playerNumber).getPlayerName() + "'s Turn!");
         int shots = 0;
@@ -22,10 +24,17 @@ public class Rounds {
             Turns.takeTurn();
            // shots = Turns.returnShots();
             System.out.println(shots);
-            shots++;
+            shots = Turns.returnShots();
+
+            System.out.println("would you like to roll again or eat your brains(r or b)");
+            String roll = scanner.nextLine();
+            if (roll.equalsIgnoreCase("b")){
+                shots = 3;
+                Player.get(playerNumber).addbrain(brains);
+            }
         }
 
-        Player.get(playerNumber).addbrain(brains);
+
      //   Turns.resetTurns();
 
 
