@@ -1,7 +1,6 @@
 package zombieDice;
 
 public class Dice {
-    //make dice object that can be red yellow or green
     //holds status of die, brain-runner-shot
     //has ability not to change dice in case it lands on runner
 
@@ -28,7 +27,7 @@ public class Dice {
     }
 
     public void changeColor() {
-        int Rando = Math.random() * 100;
+        int Rando = (int) (Math.random() * 100);
         if (Rando <= 46) {
             this.color = "green";
 
@@ -37,9 +36,63 @@ public class Dice {
         else if (Rando > 46 && Rando <= 77){
             this.color = "yellow";
         }
-        else (Rando > 77){
+        else if (Rando > 77) {
             this.color = "RED";
         }
     }
+    public void rollDice(){
+        int Mando = (int) (math.random() * 6);
+        if (this.getColor().equals("green") ) {
 
+            switch (Mando) {
+                case 0:
+                case 1:
+                case 2:
+                    this.status = "Brains";
+                    break;
+                case 3:
+                case 4:
+                    this.status = "Runner";
+                    break;
+                case 5:
+                    this.status = "SHOT!";
+                    break;
+            }
+        }
+        else if (this.getColor().equals("yellow")){
+            switch (Mando){
+                case 0:
+                case 1:
+                    this.status = "Brains";
+                    break;
+                case 2:
+                case 3:
+                    this.status = "Runner";
+                    break;
+                case 4:
+                case 5:
+                    this.status = "SHOT!";
+                    break;
+            }
+        }
+        else if (this.getColor().equals("RED")){
+            switch (Mando){
+                case 0:
+                    this.status = "Brains";
+                    break;
+                case 1:
+                case 2:
+                    this.status = "Runner";
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    this.status = "SHOT!";
+                    break;
+            }
+        }
+
+
+
+    }
 }
