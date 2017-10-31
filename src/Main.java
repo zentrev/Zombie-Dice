@@ -1,9 +1,8 @@
 //import Frame.MainFrame;
 //import Frame.PlayerPanel;
-import Frame.MainFrame;
+//import Frame.MainFrame;
 import zombieDice.Game;
-
-import javax.swing.*;
+//import javax.swing.*;
 
 public class Main {
     //runs the game
