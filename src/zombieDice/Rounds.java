@@ -32,7 +32,7 @@ public class Rounds {
                     confirm = scanner.nextLine();
                 }
             }else{
-                System.out.println("\u001B[1m" + "\u001B[31m" + "You took to many shots! (enter to continue)");
+                System.out.println("\u001B[1m" + "\u001B[31m" + "You took to many shots and lost " + brains + " Brains! (enter to continue)");
                 confirm = scanner.nextLine();
             }
         }
