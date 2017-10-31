@@ -20,68 +20,12 @@ public class Turns {
         //checks if we have a runner
         for (int i = 0; i < 3; i++) {
             if (!(die[i].getStatus()).equals("runner")) {
-                die[i].randomize();
+                die[i].changeColor();
             }
         }
 
         //rolls dice based on color
 
-        for (int i = 0; i < 3; i++) {
-            if (die[i].getColor().equals("green")) {
-                switch ((int) (Math.random() * 6)) {
-                    case 0:
-                    case 1:
-                    case 2:
-                        brains++;
-                        die[i].setStatus("brain");
-                        break;
-                    case 3:
-                    case 4:
-                        die[i].setStatus("runner");
-                        break;
-                    case 5:
-                        shots++;
-                        die[i].setStatus("shot");
-                        break;
-                }
-            }
-            if (die[i].getColor().equals("yellow")) {
-                switch ((int) (Math.random() * 6)) {
-                    case 0:
-                    case 1:
-                        brains++;
-                        die[i].setStatus("brain");
-                        break;
-                    case 2:
-                    case 3:
-                        die[i].setStatus("runner");
-                        break;
-                    case 4:
-                    case 5:
-                        shots++;
-                        die[i].setStatus("shot");
-                        break;
-                }
-            }
-            if (die[1].getColor().equals("red")) {
-                switch ((int) (Math.random() * 6)) {
-                    case 0:
-                        brains++;
-                        die[i].setStatus("brain");
-                        break;
-                    case 1:
-                    case 2:
-                        die[i].setStatus("runner");
-                        break;
-                    case 3:
-                    case 4:
-                    case 5:
-                        shots++;
-                        die[i].setStatus("shot");
-                        break;
-                }
-
-            }
 
 
             System.out.println("\u001b[33m" + "the color is " + die[i].getColor() + ", the state is " + die[i].getStatus());

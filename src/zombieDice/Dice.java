@@ -28,7 +28,7 @@ public class Dice {
     }
 
     public void changeColor() {
-        int Rando = Math.random() * 100;
+        int Rando = (int) (Math.random() * 100);
         if (Rando <= 46) {
             this.color = "green";
 
