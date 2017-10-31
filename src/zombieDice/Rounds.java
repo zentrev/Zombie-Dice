@@ -11,10 +11,8 @@ public class Rounds {
         Scanner scanner = new Scanner(System.in);
 
         Turns.resetTurns();
-        System.out.println("\u001B[1m" + Player.get(playerNumber).getPlayerName() + "'s Turn!");
         int shots = 0;
         int brains = 0;
-        String confirm;
         while (shots < 3) {
             Turns.takeTurn();
            // shots = Turns.returnShots();
@@ -28,12 +26,10 @@ public class Rounds {
                 if (roll.equalsIgnoreCase("b")) {
                     shots = 3;
                     Player.get(playerNumber).addbrain(brains);
-                    System.out.println("\u001B[1m" + "\u001B[32m" +Player.get(playerNumber).getPlayerName() + " ate the brains and how has " + Player.get(playerNumber).getBrains() + " Brains! (enter to continues)" + "\n");
-                    confirm = scanner.nextLine();
+                    System.out.println("\u001B[1m" + "\u001B[32m" +Player.get(playerNumber).getPlayerName() + " ate the brains and how has " + Player.get(playerNumber).getBrains() + " Brains!");
                 }
             }else{
-                System.out.println("\u001B[1m" + "\u001B[31m" + "You took to many shots and lost " + brains + " Brains! (enter to continue)");
-                confirm = scanner.nextLine();
+                System.out.println("\u001B[1m" + "\u001B[31m" + "You took to many shots and lost " + brains + " Brains!");
             }
         }
     }
