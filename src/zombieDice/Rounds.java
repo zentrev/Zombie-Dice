@@ -17,6 +17,7 @@ public class Rounds {
     public static void Round(int playerNumber, List<Players> Player){
         Scanner scanner = new Scanner(System.in);
 
+        Turns.resetTurns();
         System.out.println(Player.get(playerNumber).getPlayerName() + "'s Turn!");
         int shots = 0;
         int brains = 0;
@@ -30,6 +31,7 @@ public class Rounds {
             String roll = scanner.nextLine();
             if (roll.equalsIgnoreCase("b")){
                 shots = 3;
+                brains = Turns.returnBrains();
                 Player.get(playerNumber).addbrain(brains);
             }
         }
