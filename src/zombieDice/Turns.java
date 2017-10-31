@@ -1,9 +1,8 @@
 package zombieDice;
 
 
-import Frame.GamePanel;
-
-import javax.swing.*;
+//import Frame.GamePanel;
+//import javax.swing.*;
 
 public class Turns {
 
