@@ -25,6 +25,8 @@ public class Game {
         boolean playRounds = true;
         int listLength = 0;
         int currentPlayer = 0;
+        int winNumber = 0;
+        int winPlayer = 0;
 
         //Player Creation
         while (makePlayer) {
@@ -39,10 +41,10 @@ public class Game {
             Player.add(new Players(playerx));
             //PlayerPanel.PlayerEdit(playerx);
 
-            System.out.println("Is there another player?: (yes/no)");
+            System.out.println("Is there another player?: (Y/N)");
             input = scanner.nextLine();
 
-            if (!input.equalsIgnoreCase("yes")) {
+            if (!input.equalsIgnoreCase("y")) {
                 makePlayer = false;
             }else{
                 nameCheck = true;
@@ -59,7 +61,8 @@ public class Game {
             for (int i = 0; i < listLength; i++){
                 Rounds.Round(i, Player);
                 if (Player.get(i).braincount() >= 13) {
-                    currentPlayer = i;
+                    System.out.println("\u001B[1m" + "\u001B[30m" + "\u001b[41m" + Player.get(i).getPlayerName() + " has eaten " + Player.get(i).getBrains() + " Brains, you each get one shot to beet that!");
+                    currentPlayer = i+1;
                     i = listLength+1;
                     playRounds = false;
 
@@ -68,13 +71,22 @@ public class Game {
 
         }
 
-        for ( int i = 0; i < listLength -1; i++){
-            currentPlayer++;
+        for (int i = 0; i < listLength -1; i++){
             if(currentPlayer == listLength){
-                currentPlayer = 1;
+                currentPlayer = 0;
             }
             Rounds.Round(currentPlayer, Player);
+            currentPlayer++;
         }
+
+
+        for (int i = 0; i < listLength; i++){
+            if(Player.get(i).braincount() > winNumber){
+                winNumber = Player.get(i).braincount();
+                winPlayer = i;
+            }
+        }
+        System.out.println("\u001B[1m" + "\u001B[32m" + "\u001b[44m" + " " + Player.get(winPlayer).getPlayerName() + " Won with " + winNumber + " Brains!");
 
 
     }

@@ -40,6 +40,7 @@ public class Dice {
             this.color = "RED";
         }
     }
+
     public void rollDice(){
         int Mando = (int) (Math.random() * 6);
         if (this.getColor().equals("green") ) {
