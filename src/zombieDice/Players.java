@@ -11,18 +11,18 @@ public class Players {
     }
 
     //makes object of players
-    public String players(){
-        return playerName;
+    public String getPlayerName(){
+        return this.playerName;
 
     }
 
     public int braincount(){
-        return brains;
+        return this.brains;
 
     }
-    //keep track of players brains and name
 
-    //encapsulation to access and edit player information
+    public void addbrain(int addbrains){
+        this.brains = this.brains + addbrains;
 
-
+    }
 }

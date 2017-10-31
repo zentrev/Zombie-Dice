@@ -1,72 +1,68 @@
 package zombieDice;
 
+import Frame.PlayerPanel;
+
 import java.util.Scanner;
 import java.util.List;
 import java.util.LinkedList;
 
 public class Game {
     public static void startGame() {
-        Scanner scanner = new Scanner(System.in);
-
-List<Players> Player = new LinkedList<Players>();
-Player = new LinkedList<Players>();
 
         //makes players
         //goes threw every players rounds
         //once a player gets 13 brains run one round for every other player
         //end the game showing the winner
 
+        //Variables
+        Scanner scanner = new Scanner(System.in);
+        List<Players> Player = new LinkedList<Players>();
 
-// for some reasons the two scanners are not the same
-
-        boolean p = true;
-        boolean n = true;
         String playerx = "";
-        while (p) {
-            while (n) {
+        String input;
+        boolean makePlayer = true;
+        boolean nameCheck = true;
+        boolean playRounds = true;
+        int listLength = 0;
+
+        //Player Creation
+        while (makePlayer) {
+            while (nameCheck) {
                 System.out.println("Please enter the name of the Player: ");
                 playerx = scanner.nextLine();
-                if (!playerx.equals("") && playerx.length() > 0) {
-                    n = false;
+                if (!playerx.equals("")) {
+                    nameCheck = false;
                 }
             }
 
             Player.add(new Players(playerx));
-            System.out.println("Is there another player?: ");
-            String input = scanner.nextLine();
+            //PlayerPanel.PlayerEdit(playerx);
+
+            System.out.println("Is there another player?: (yes/no)");
+            input = scanner.nextLine();
 
             if (!input.equalsIgnoreCase("yes")) {
-                p = false;
+                makePlayer = false;
             }else{
-                n = true;
+                nameCheck = true;
             }
         }
 
-
-
-
-
-
-        int listLenght = 0;
-
+        //Finds number of players
         for (Players x : Player) {
-            listLenght++;
+            listLength++;
         }
 
-
-boolean r = true;
-
-
-
-
-        while (r){
-            for (int i = 0; i < listLenght; i++){
-                Rounds.Round(i);
-if (Player.get(i).braincount() >= 13) {
-    i = listLenght+1;
-    r = false;
-}
+        //plays rounds
+        while (playRounds){
+            for (int i = 0; i < listLength; i++){
+                Rounds.Round(i, Player);
+                if (Player.get(i).braincount() >= 13) {
+                    i = listLength+1;
+                    playRounds = false;
+                }
             }
+            playRounds = false;
         }
     }
 }
