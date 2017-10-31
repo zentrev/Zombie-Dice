@@ -61,11 +61,10 @@ public class Game {
         //plays rounds
         while (playRounds){
             for (int i = 0; i < listLength; i++){
-                System.out.println("\u001B[1m" + Player.get(i).getPlayerName() + "'s Turn! (enter to continue)");
-                String con = scanner.nextLine();
+
                 Rounds.Round(i, Player);
                 if (Player.get(i).braincount() >= 13) {
-                    System.out.println("\u001B[1m" + "\u001B[30m" + "\u001b[41m" + Player.get(i).getPlayerName() + " has eaten " + Player.get(i).getBrains() + " Brains, you each get one shot to beet that!");
+                    System.out.println("\u001B[1m" + "\u001B[30m" + "\u001b[41m" + Player.get(i).getPlayerName() + " has eaten " + Player.get(i).getBrains() + " Brains, you each get one shot to beat that!");
                     currentPlayer = i+1;
                     i = listLength+1;
                     playRounds = false;
@@ -76,6 +75,8 @@ public class Game {
         }
 
         for (int i = 0; i < listLength -1; i++){
+            System.out.println("\u001B[1m" + Player.get(i).getPlayerName() + "'s Turn! (enter to continue)");
+            String con = scanner.nextLine();
             if(currentPlayer == listLength){
                 currentPlayer = 0;
             }
