@@ -20,13 +20,13 @@ public class Rounds {
         int brains = 0;
         while (shots < 3) {
             Turns.takeTurn();
-            shots = Turns.returnShots();
+           // shots = Turns.returnShots();
             System.out.println(shots);
             shots++;
         }
 
         Player.get(playerNumber).addbrain(brains);
-        Turns.resetTurns();
+     //   Turns.resetTurns();
 
 
 

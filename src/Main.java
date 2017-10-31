@@ -1,5 +1,6 @@
 //import Frame.MainFrame;
 //import Frame.PlayerPanel;
+import Frame.MainFrame;
 import zombieDice.Game;
 
 import javax.swing.*;
@@ -34,7 +35,7 @@ public class Main {
 //                new MainFrame();
 //            }
 //        });
-//        Game game = new Game();
+
         Game.startGame();
     }
 }

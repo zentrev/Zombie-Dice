@@ -1,5 +1,7 @@
 package zombieDice;
 
+import Frame.PlayerPanel;
+
 import java.util.Scanner;
 import java.util.List;
 import java.util.LinkedList;
@@ -33,8 +35,9 @@ public class Game {
                 }
             }
 
-
             Player.add(new Players(playerx));
+            //PlayerPanel.PlayerEdit(playerx);
+
             System.out.println("Is there another player?: (yes/no)");
             input = scanner.nextLine();
 
