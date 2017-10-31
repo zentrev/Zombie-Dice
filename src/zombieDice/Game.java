@@ -90,7 +90,7 @@ public class Game {
                 winPlayer = i;
             }
         }
-        System.out.println("\u001B[1m" + "\u001B[32m" + "\u001b[44m" + " " + Player.get(winPlayer).getPlayerName() + " Won with " + winNumber + " Brains!");
+        System.out.println("\u001B[1m" + "\u001B[32m" + "\u001b[44m"  + Player.get(winPlayer).getPlayerName() + " Won with " + winNumber + " Brains!");
 
 
     }
