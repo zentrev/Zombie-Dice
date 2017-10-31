@@ -16,6 +16,10 @@ public class Players {
 
     }
 
+    public int getBrains(){
+        return this.brains;
+    }
+
     public int braincount(){
         return this.brains;
 

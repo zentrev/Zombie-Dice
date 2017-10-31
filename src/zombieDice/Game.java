@@ -65,7 +65,7 @@ public class Game {
 
                 }
             }
-            playRounds = false;
+
         }
 
         for ( int i = 0; i < listLength -1; i++){

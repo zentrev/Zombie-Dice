@@ -26,12 +26,13 @@ public class Rounds {
            // shots = Turns.returnShots();
             System.out.println(shots);
             shots = Turns.returnShots();
-
+            brains = Turns.returnBrains();
+            System.out.println("You got " + brains + " brains");
+            System.out.println("Total brains: " + Player.get(playerNumber).getBrains());
             System.out.println("would you like to roll again or eat your brains(r or b)");
             String roll = scanner.nextLine();
             if (roll.equalsIgnoreCase("b")){
                 shots = 3;
-                brains = Turns.returnBrains();
                 Player.get(playerNumber).addbrain(brains);
             }
         }
