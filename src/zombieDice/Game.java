@@ -76,7 +76,7 @@ public class Game {
         }
 
         for (int i = 0; i < listLength -1; i++){
-            System.out.println("\u001B[1m" + Player.get(currentPlayer).getPlayerName() + "'s Turn! (enter to continue)");
+            System.out.println("\u001B[1m" + Player.get(currentPlayer-1).getPlayerName() + "'s Turn! (enter to continue)");
             String con = scanner.nextLine();
             if(currentPlayer == listLength){
                 currentPlayer = 0;
