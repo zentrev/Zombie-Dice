@@ -1,6 +1,6 @@
 package zombieDice;
 
-import Frame.PlayerPanel;
+//import Frame.PlayerPanel;
 
 import java.util.Scanner;
 import java.util.List;
