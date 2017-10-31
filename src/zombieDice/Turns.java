@@ -16,7 +16,7 @@ public class Turns {
     //Runs turns
     public static void takeTurn() {
 
-/*
+
         //checks if we have a runner
         for (int i = 0; i < 3; i++) {
             if (!(die[i].getStatus()).equals("runner")) {
@@ -101,5 +101,5 @@ public class Turns {
     public static void resetTurns(){
         shots = 0;
         brains = 0;
-    */}
+    }
 }
