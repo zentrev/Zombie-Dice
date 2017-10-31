@@ -1,17 +1,23 @@
 package zombieDice;
 
 public class Dice {
+    //make dice object that can be red yellow or green
+    //holds status of die, brain-runner-shot
+    //has ability not to change dice in case it lands on runner
+    
 
-    //We need to be able to get the color name and status
-    //we need to be able to change the status
-    //we need to randomize the color if we want to
+    private String color;
+    private String status;
 
-
-    private String color = null;
-    private String status = "";
-
-    public Dice(){
-        color = null;
-        status = "";
+    public void die(){
+        this.color = "";
+        this.status = "";
     }
+
+    public String getColor(){return color;}
+    public String getStatus(){return status;}
+    public void setStatus(String stat){
+        this.status = stat;
+    }
+
 }
