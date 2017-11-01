@@ -1,9 +1,6 @@
 package zombieDice;
 
 public class Dice {
-    //holds status of die, brain-runner-shot
-    //has ability not to change dice in case it lands on runner
-
 
     private String color = null;
     private String status = "";

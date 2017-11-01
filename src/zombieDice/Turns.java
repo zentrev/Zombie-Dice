@@ -1,9 +1,6 @@
 package zombieDice;
 
 
-//import Frame.GamePanel;
-//import javax.swing.*;
-
 public class Turns {
 
     //Varibles

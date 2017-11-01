@@ -41,7 +41,6 @@ public class Game {
             }
 
             Player.add(new Players(playerx));
-            //PlayerPanel.PlayerEdit(playerx);
 
             System.out.println("Is there another player?: (Y/N)");
             input = scanner.nextLine();
